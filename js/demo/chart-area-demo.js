@@ -28,11 +28,13 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
+$(document).ready(function(){
+  $.getJSON('https://api.covid19india.org/data.json', function(jd) {
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["Jan-31", "Feb-09", "Feb 02", "Feb 09", "Feb 16", "Feb 23", "Mar 08", "Mar 15", "Mar 22", "Mar 29", "Apr 05", "Apr 12", "Apr 19"],
+        labels: ["Jan 31", "Feb 01", "Feb 02", "Feb 09", "Feb 16", "Feb 23", "Mar 08", "Mar 15", "Mar 22", "Mar 29", "Apr 05", "Apr 12", "Apr 19"],
         datasets: [{
             label: "Spread",
             lineTension: 0.3,
@@ -46,7 +48,7 @@ var myLineChart = new Chart(ctx, {
             pointHoverBorderColor: "rgba(78, 115, 223, 1)",
             pointHitRadius: 10,
             pointBorderWidth: 2,
-            data: [0, 3, 102, 126, 148, 571, 1001, 1541, 3789, 6513, 10789, 13294, 15723],
+            data: [jd.cases_time_series[1].totalconfirmed, jd.cases_time_series[2].totalconfirmed, jd.cases_time_series[3].totalconfirmed, jd.cases_time_series[11].totalconfirmed, jd.cases_time_series[18].totalconfirmed, jd.cases_time_series[25].totalconfirmed, jd.cases_time_series[39].totalconfirmed, jd.cases_time_series[46].totalconfirmed, jd.cases_time_series[53].totalconfirmed, jd.cases_time_series[60].totalconfirmed, jd.cases_time_series[67].totalconfirmed, jd.cases_time_series[74].totalconfirmed,jd.cases_time_series[81].totalconfirmed],
         }],
     },
     options: {
@@ -90,4 +92,6 @@ var myLineChart = new Chart(ctx, {
             display: false
         }
     }
+    });
+});
 });
