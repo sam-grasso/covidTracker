@@ -313,13 +313,15 @@
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
                                                         <div id="Recovered"></div>
                                                         <div class="col-auto">
-                                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">22%</div>
+                                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                                <div id="recovery_ratio"></div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 22%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 24%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -493,10 +495,10 @@
         $.getJSON('https://api.covid19india.org/data.json', function(jd) {
             a = jd.statewise[0].confirmed;
             b = jd.statewise[0].recovered;
-            n = (b / a).toPrecision(3);
+            n = parseInt((b / a) * 100);
             $("#total_cases").html(jd.statewise[0].confirmed);
             $("#Recovered").html(jd.statewise[0].recovered);
-            $("#recovery_ratio").html(n * 100);
+            $("#recovery_ratio").html(`${n}%`);
         });
     });
 </script>
