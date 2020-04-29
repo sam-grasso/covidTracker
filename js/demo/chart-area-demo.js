@@ -29,10 +29,10 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 $(document).ready(function() {
     $.getJSON('https://api.covid19india.org/data.json', function(jd) {
         var ctx = document.getElementById("myAreaChart");
-        let degree = parseInt(jd.cases_time_series.length / 20)
+        let degree = parseInt(jd.cases_time_series.length / 30)
         let labelex = []
         let dataex = []
-        for (let i = 0; i < 21; i++) {
+        for (let i = 10; i < 30; i++) {
             labelex.push(`"${jd.cases_time_series[degree*i].date}"`)
             dataex.push(jd.cases_time_series[degree * i].totalconfirmed)
         }
