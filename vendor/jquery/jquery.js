@@ -1,4 +1,16 @@
-#
+/*!
+ * jQuery JavaScript Library v3.4.1
+ * https://jquery.com/
+ *
+ * Includes Sizzle.js
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2019-05-01T21:04Z
+ */
 (function(global, factory) {
 
     "use strict";
@@ -497,7 +509,16 @@
             typeof length === "number" && length > 0 && (length - 1) in obj;
     }
     var Sizzle =
-
+        /*!
+         * Sizzle CSS Selector Engine v2.3.4
+         * https://sizzlejs.com/
+         *
+         * Copyright JS Foundation and other contributors
+         * Released under the MIT license
+         * https://js.foundation/
+         *
+         * Date: 2019-04-08
+         */
         (function(window) {
 
             var i,
