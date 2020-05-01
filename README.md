@@ -23,6 +23,7 @@ This folder is a special folder that contains libraries that are used to add mor
 * **fontawesome-free** contains svg icons and different fonts used in the html document.
 * **jquery** is a library used to extract elements from the web document and further add interactivity to it.
 
+The js folder contains the javascript files that are used to provide dynamic behavior to the web documents and the css folder contains css files that are used to style the web pages.
 
 
 
