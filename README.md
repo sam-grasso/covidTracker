@@ -1,3 +1,15 @@
+# Group Id: 
+
+Name | Roll no | Email
+---- | ------- | -----
+Anshul Mishra | 41220902717 | anshulm.dev@gmail.com
+Aman Negi | 41520902717 | amannegi512@gmail.com
+Urvi Sharma | 41120902717 | 9urvi99@gmail.com
+Sandip Baidya | 031290902717 | sandipbaidya17@gmail.com
+Shyam Tiwari| 41020902717 |
+
+
+
 # CovidTracker
 A web application to track Covid-19 cases in India
 
